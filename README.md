@@ -60,7 +60,7 @@ Here:
 - `test_3DHP_scaled.npz` contains the processed MPI-INF-3DHP data used for evaluation.
 - `pre_3DHP.npy` contains the predicted 3D poses of MPI-INF-3DHP generated using a pre-trained pose estimator.
 
-> **Note:** Dataset files are not distributed with this repository. Please follow PoseAug https://github.com/jfzhang95/PoseAug to prepare the Human3.6M dataset and 3DHP dataset.
+**Note:** Dataset files are not distributed with this repository. Please follow [PoseAug](https://github.com/jfzhang95/PoseAug) to prepare the Human3.6M and MPI-INF-3DHP datasets.
 
 ### 1. Generate Target-Domain Pseudo 3D Poses
 
