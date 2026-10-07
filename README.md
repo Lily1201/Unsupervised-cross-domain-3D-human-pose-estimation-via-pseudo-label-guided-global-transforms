@@ -140,42 +140,9 @@ python3 run_evaluate.py \
 
 Replace the checkpoint path with the model that you would like to evaluate.
 
-## Method Pipeline
+Some processed data files and the pretrained checkpoint are provided via [Google Drive](YOUR_GOOGLE_DRIVE_LINK) for convenience.
 
-The main workflow can be summarised as:
 
-```text
-Human3.6M
-   │
-   ├── Source 2D/3D poses
-   │
-   └── Camera → Human-centric transformation
-                     │
-                     │
-                     ▼
-              Global Transformation
-                     ▲
-                     │
-MPI-INF-3DHP         │
-   │                 │
-   ├── 2D poses      │
-   │                 │
-   └── Baseline 3D prediction
-              │
-              ▼
-         Pseudo 3D Pose
-              │
-              ▼
-      Absolute Pose Estimation
-              │
-              ▼
- Camera → Human-centric transformation
-              │
-              ▼
-      Target-guided Augmentation
-              │
-              ▼
-       Pose Estimator Training
 ```
 
 ## Citation
@@ -183,21 +150,22 @@ MPI-INF-3DHP         │
 If you find this work useful for your research, please cite our paper:
 
 ```bibtex
-@article{liu2025unsupervised,
-  title={Unsupervised Cross-Domain 3D Human Pose Estimation via Pseudo-Label-Guided Global Transforms},
-  author={...},
-  journal={IEEE Transactions on Circuits and Systems for Video Technology},
-  year={2025}
-}
-```
+@ARTICLE{11164302,
+  author={Liu, Jingjing and Wang, Zhiyong and Fan, Xinyu and Dadashzadeh, Amirhossein and Liu, Honghai and Mirmehdi, Majid},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  title={Unsupervised Cross-Domain 3D Human Pose Estimation via Pseudo-Label-Guided Global Transforms}, 
+  year={2026},
+  volume={36},
+  number={2},
+  pages={2151-2163},
+  doi={10.1109/TCSVT.2025.3610066}}
 
-The complete BibTeX information will be updated with the final publication metadata.
+```
 
 ## Acknowledgements
 
-This implementation builds upon existing work in 3D human pose estimation and pose augmentation. We thank the authors of the relevant open-source projects and the Human3.6M and MPI-INF-3DHP datasets.
+This implementation builds upon [PoseAug](https://github.com/jfzhang95/PoseAug). We thank the authors of the relevant open-source projects and the Human3.6M and MPI-INF-3DHP datasets.
 
-Detailed acknowledgements and links to the upstream repositories will be added before release.
 
 ## License
 
