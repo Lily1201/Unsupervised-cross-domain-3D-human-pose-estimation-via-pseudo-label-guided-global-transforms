@@ -4,20 +4,6 @@
 
 This repository provides the implementation for unsupervised cross-domain 3D human pose estimation using pseudo-label-guided global transformations. The method leverages pseudo 3D poses from the target domain to estimate global transformations between camera-centric and human-centric coordinate systems, which are then used for cross-domain pose augmentation and adaptation.
 
-## Overview
-
-Cross-domain 3D human pose estimation is challenging because pose distributions can vary substantially across datasets due to differences in camera viewpoints, subject locations, motion patterns, and acquisition settings.
-
-Our approach uses pseudo-labelled target-domain 3D poses to guide global transformations of source-domain poses. The overall pipeline consists of:
-
-1. Train a baseline 3D pose estimator on the source domain.
-2. Generate pseudo 3D poses for the target domain.
-3. Estimate absolute target-domain 3D poses using bone-length constraints.
-4. Estimate camera-to-human-centric rotation and translation transformations for the source and target domains.
-5. Use the estimated transformations for pose augmentation and cross-domain adaptation.
-6. Train the pose estimator using the augmented poses.
-7. Evaluate the adapted model on the target domain.
-
 ## Repository Structure
 
 ```text
@@ -45,17 +31,10 @@ Our approach uses pseudo-labelled target-domain 3D poses to guide global transfo
 
 ## Installation
 
-Clone this repository:
-
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd <REPOSITORY_NAME>
-```
-
 Create a Python environment and install the required dependencies.
 
 ```bash
-conda create -n poseaug python=<PYTHON_VERSION>
+conda create -n poseaug python=3.6.9
 conda activate poseaug
 pip install -r requirements.txt
 ```
@@ -79,7 +58,7 @@ Here:
 - `data_3d_h36m.npz` contains the Human3.6M 3D pose data.
 - `data_2d_h36m_gt.npz` contains the corresponding Human3.6M 2D ground-truth poses.
 - `test_3DHP_scaled.npz` contains the processed MPI-INF-3DHP data used for evaluation.
-- `pre_3DHP.npy` contains the predicted 3D poses of MPI-INF-3DHP generated using the baseline pose estimator.
+- `pre_3DHP.npy` contains the predicted 3D poses of MPI-INF-3DHP generated using a pre-trained pose estimator.
 
 > **Note:** Dataset files are not distributed with this repository. Please obtain the original datasets according to their respective licenses and prepare them following the required format.
 
