@@ -103,7 +103,7 @@ These transformations are subsequently used to transfer the global pose characte
 
 ## Pre-trained Model
 
-Before running cross-domain adaptation, place the baseline model pre-trained on Human3.6M in the `checkpoint/` directory:
+Before running cross-domain adaptation, place the pre-trained baseline model  in the `checkpoint/` directory:
 
 ```text
 checkpoint/
