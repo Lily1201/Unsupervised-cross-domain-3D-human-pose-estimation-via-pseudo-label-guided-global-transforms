@@ -140,7 +140,7 @@ python3 run_evaluate.py \
 
 Replace the checkpoint path with the model that you would like to evaluate.
 
-Some processed data files and the pretrained checkpoint are provided via [Google Drive](YOUR_GOOGLE_DRIVE_LINK) for convenience.
+Some processed data files and the pretrained checkpoint are provided via [Google Drive](https://drive.google.com/drive/folders/1e3lfvY1e-TKqRoG7VD4nmrE4aY26d4N7?usp=sharing) for convenience.
 
 
 ```
